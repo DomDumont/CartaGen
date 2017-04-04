@@ -14,6 +14,7 @@ install:
   - set PATH=%PATH%;%QT_DIR%\bin  
   - '%COMPILERBAT%' 
   - ps: Start-FileDownload 'https://dl.itch.ovh/butler/windows-386/head/butler.exe'
+  - dir
 
 build_script:
   - cd Src
@@ -26,7 +27,7 @@ after_build:
   - copy release\CartaGen.exe deploy\CartaGen.exe
   - windeployqt --release --no-translations --no-angle --no-opengl-sw deploy/CartaGen.exe
   - 7z a cartagen_win_%arch%.zip .\deploy\*
-  - butler push cartagen_win_%arch%.zip domdumont/cartagen
+  - ..\butler push cartagen_win_%arch%.zip domdumont/cartagen
 
   
 
