@@ -1,4 +1,6 @@
 environment:
+  BUTLER_API_KEY:
+    secure: o8a4458kbK0EsNGiQgrmSsPRkV+tE/xBrgBx7MgbDTfYaqSdMe6xFu5nsCqmkpcK  
   matrix:
     - arch: x64
       QT_DIR: C:\Qt\5.8\msvc2015_64
@@ -11,8 +13,7 @@ environment:
 install:
   - set PATH=%PATH%;%QT_DIR%\bin  
   - '%COMPILERBAT%' 
-# TODO descide Decide whether vcredist_$(arch).exe should be packaged with the application or published separately. 
-#  - set VCINSTALLDIR=C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC
+  - ps: Start-FileDownload 'https://dl.itch.ovh/butler/windows-386/head/butler.exe'
 
 build_script:
   - cd Src
@@ -25,8 +26,7 @@ after_build:
   - copy release\CartaGen.exe deploy\CartaGen.exe
   - windeployqt --release --no-translations --no-angle --no-opengl-sw deploy/CartaGen.exe
   - 7z a cartagen_win_%arch%.zip .\deploy\*
+  - butler push cartagen_win_%arch%.zip domdumont/cartagen
 
-artifacts:
-  - path: cartagen_win_$(arch).zip
   
 
