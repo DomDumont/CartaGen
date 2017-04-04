@@ -14,16 +14,10 @@ install:
 # TODO descide Decide whether vcredist_$(arch).exe should be packaged with the application or published separately. 
 #  - set VCINSTALLDIR=C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC
 
-before_build:
+build_script:
   - cd Src
   - qmake CONFIG+=release
   - nmake /S /NOLOGO
-  - cd release
-  - dir
-  - cd ..
-  - cd debug
-  - dir
-  - cd ..
 
 
 after_build:
