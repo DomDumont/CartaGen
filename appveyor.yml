@@ -1,10 +1,10 @@
 
 environment:
-matrix:
-  - arch: x64
-    QT_DIR: C:\Qt\5.8\msvc2015_64
-  - arch: x86
-    QT_DIR: C:\Qt\5.8\msvc2015
+  matrix:
+    - arch: x64
+      QT_DIR: C:\Qt\5.8\msvc2015_64
+    - arch: x86
+      QT_DIR: C:\Qt\5.8\msvc2015
 
 install:
   - set PATH=%PATH%;%QT_DIR%\bin
