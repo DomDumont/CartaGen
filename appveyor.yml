@@ -1,0 +1,8 @@
+
+install:
+  - set QTDIR=C:\Qt\5.8\mingw53_32
+  - set PATH=%PATH%;%QTDIR%\bin;C:\MinGW\bin
+build_script:
+  - cd Src
+  - qmake CartaGen.pro
+  - mingw32-make
