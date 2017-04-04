@@ -1,15 +1,16 @@
-os: Visual Studio 2015
-
 environment:
   matrix:
     - arch: x64
       QT_DIR: C:\Qt\5.8\msvc2015_64
+      COMPILERBAT: '"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" x86_amd64'
+
     - arch: x86
       QT_DIR: C:\Qt\5.8\msvc2015
+      COMPILERBAT: '"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" x86'
 
 install:
-  - set PATH=%PATH%;%QT_DIR%\bin
-  - call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat"  
+  - set PATH=%PATH%;%QT_DIR%\bin  
+  - '%COMPILERBAT%' 
 # TODO descide Decide whether vcredist_$(arch).exe should be packaged with the application or published separately. 
 #  - set VCINSTALLDIR=C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC
 
