@@ -1,3 +1,4 @@
+os: Visual Studio 2015
 
 environment:
   matrix:
@@ -8,11 +9,11 @@ environment:
 
 install:
   - set PATH=%PATH%;%QT_DIR%\bin
+  - call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat"  
 # TODO descide Decide whether vcredist_$(arch).exe should be packaged with the application or published separately. 
 #  - set VCINSTALLDIR=C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC
 
 before_build:
-  - set CARTAGEN_VERSION=%APPVEYOR_REPO_TAG_NAME%
   - cd Src
   - qmake CONFIG+=release
   - nmake /S /NOLOGO
