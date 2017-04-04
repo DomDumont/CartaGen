@@ -1,8 +1,32 @@
 
+environment:
+matrix:
+  - arch: x64
+    QT_DIR: C:\Qt\5.8\msvc2015_64
+  - arch: x86
+    QT_DIR: C:\Qt\5.8\msvc2015
+
 install:
-  - set QTDIR=C:\Qt\5.8\mingw53_32
-  - set PATH=%PATH%;%QTDIR%\bin;C:\MinGW\bin
-build_script:
+  - set PATH=%PATH%;%QT_DIR%\bin
+# TODO descide Decide whether vcredist_$(arch).exe should be packaged with the application or published separately. 
+#  - set VCINSTALLDIR=C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC
+
+before_build:
+  - set CARTAGEN_VERSION=%APPVEYOR_REPO_TAG_NAME%
   - cd Src
-  - qmake CartaGen.pro
-  - mingw32-make
+  - qmake -config release -tp vc -spec win32-msvc2015 CartaGen.pro
+  - dir
+
+configuration:
+  - Release
+
+after_build:
+  - mkdir deploy
+  - copy CartaGen.exe deploy\CartaGen.exe
+  - windeployqt --release --no-translations --no-angle --no-opengl-sw deploy/CartaGen.exe
+  - 7z a cartagen_win_%arch%.zip .\deploy\*
+
+artifacts:
+  - path: cartagen_win_$(arch).zip
+  
+
