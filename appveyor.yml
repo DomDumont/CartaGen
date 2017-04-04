@@ -18,11 +18,13 @@ before_build:
   - cd Src
   - qmake CONFIG+=release
   - nmake /S /NOLOGO
+  - cd release
   - dir
+  - cd ..
+  - cd debug
+  - dir
+  - cd ..
 
-
-configuration:
-  - Release
 
 after_build:
   - mkdir deploy
