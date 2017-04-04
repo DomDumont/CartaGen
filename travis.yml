@@ -1,0 +1,19 @@
+sudo: required
+dist: trusty
+
+before_install:
+  - sudo add-apt-repository --yes ppa:beineri/opt-qt58-trusty
+  - sudo apt-get update -qq
+
+install:
+  - sudo apt-get -y install qt58base qt58declarative qt58serialport
+
+  - wget -c https://github.com/probonopd/linuxdeployqt/releases/download/2/linuxdeployqt-2-x86_64.AppImage -O linuxdeployqt
+  - chmod a+x linuxdeployqt
+
+  - export QTDIR=/opt/qt58
+
+script: ./build_linux.sh
+
+after_success:
+  - ls
