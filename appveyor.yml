@@ -27,9 +27,8 @@ after_build:
   - copy release\CartaGen.exe deploy\CartaGen.exe
   - windeployqt --release --no-translations --no-angle --no-opengl-sw deploy/CartaGen.exe
   - 7z a cartagen_win_%arch%.zip .\deploy\*
-  - ..\butler push cartagen_win_%arch%.zip domdumont/cartagen:windows-%arch%-alpha
-    on:
-        appveyor_repo_tag: true
+  - if defined APPVEYOR_REPO_TAG_NAME set VERSION=%APPVEYOR_REPO_TAG_NAME%  
+  - if defined APPVEYOR_REPO_TAG_NAME ..\butler push cartagen_win_%arch%.zip domdumont/cartagen:windows-%VERSION%-%arch%-alpha
 
   
 
