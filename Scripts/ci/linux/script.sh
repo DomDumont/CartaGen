@@ -41,7 +41,6 @@ popd
 
 pushd ${BUILDDIR}
 
-pushd app
 
 # icns2png ${SOURCEDIR}/app/images/patternpaint.icns -x
 # cp patternpaint_256x256x32.png patternpaint.png
@@ -49,8 +48,6 @@ pushd app
 cp ${SOURCEDIR}/CartaGen.icns ./
 cp ${SOURCEDIR}/CartaGen.png ./
 cp ${SOURCEDIR}/CartaGen.desktop ./
-
-popd
 
 
 # TODO: this should be done automagically though the qt build tools?
@@ -60,8 +57,8 @@ popd
 
 unset LD_LIBRARY_PATH # Remove too old Qt from the search path; TODO: Move inside the linuxdeployqt AppImage
 
-PATH=${QTDIR}/bin:${PATH} ${LINUXDEPLOYQT} app/CartaGen -bundle-non-qt-libs
-PATH=${QTDIR}/bin:${PATH} ${LINUXDEPLOYQT} app/CartaGen -appimage
+PATH=${QTDIR}/bin:${PATH} ${LINUXDEPLOYQT} CartaGen -bundle-non-qt-libs
+PATH=${QTDIR}/bin:${PATH} ${LINUXDEPLOYQT} CartaGen -appimage
 
 tar -cjf CartaGen-x86_64_${VERSION}.tar.bz2 CartaGen-x86_64.AppImage
 
