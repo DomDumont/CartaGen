@@ -1,19 +1,11 @@
 sudo: required
 dist: trusty
 
-before_install:
-  - sudo add-apt-repository --yes ppa:beineri/opt-qt58-trusty
-  - sudo apt-get update -qq
+os:
+  - linux
+  - osx
 
-install:
-  - sudo apt-get -y install qt58base qt58declarative qt58serialport
-
-  - wget -c https://github.com/probonopd/linuxdeployqt/releases/download/2/linuxdeployqt-2-x86_64.AppImage -O linuxdeployqt
-  - chmod a+x linuxdeployqt
-
-  - export QTDIR=/opt/qt58
-
-script: ./build_linux.sh
-
-after_success:
-  - ls
+before_install: . Scripts/ci/$TRAVIS_OS_NAME/before_install.sh
+install: . Scripts/ci/$TRAVIS_OS_NAME/install.sh
+script: . Scripts/ci/$TRAVIS_OS_NAME/script.sh
+after_success: . Scripts/ci/$TRAVIS_OS_NAME/after_success.sh

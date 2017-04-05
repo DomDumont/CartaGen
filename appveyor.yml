@@ -28,6 +28,8 @@ after_build:
   - windeployqt --release --no-translations --no-angle --no-opengl-sw deploy/CartaGen.exe
   - 7z a cartagen_win_%arch%.zip .\deploy\*
   - ..\butler push cartagen_win_%arch%.zip domdumont/cartagen:windows-%arch%-alpha
+    on:
+        appveyor_repo_tag: true
 
   
 
