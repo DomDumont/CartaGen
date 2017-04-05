@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=CartaGen
+Type=Application
+Icon=CartaGen
+Exec=CartaGen
+Categories=Development;
+Comment= a playgin card editor
