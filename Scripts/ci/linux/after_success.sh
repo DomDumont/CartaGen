@@ -1,2 +1,2 @@
 ls
-./butler push ${BUILDDIR}/CartaGen-x86_64.AppImage domdumont/cartagen:linux-alpha
+./butler push ${BUILDDIR}/Image domdumont/cartagen:linux-alpha

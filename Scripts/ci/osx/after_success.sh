@@ -1,2 +1,2 @@
 ls
-./butler push ${BUILDDIR}/CartaGen.dmg domdumont/cartagen:osx-alpha
+./butler push ${BUILDDIR}/Image domdumont/cartagen:osx-alpha

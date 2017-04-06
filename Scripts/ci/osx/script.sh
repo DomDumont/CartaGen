@@ -42,6 +42,8 @@ pushd ${BUILDDIR}
 
 PATH=${QTDIR}/bin:${PATH} ${MACDEPLOYQT} CartaGen.app -always-overwrite -verbose=2
 PATH=${QTDIR}/bin:${PATH} ${MACDEPLOYQT} CartaGen.app -dmg -no-plugins
-ls
-
+mkdir -p Image
+pushd Image
+cp ../CartaGen.app ./
+popd
 popd

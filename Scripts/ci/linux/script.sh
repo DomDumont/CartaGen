@@ -60,6 +60,9 @@ unset LD_LIBRARY_PATH # Remove too old Qt from the search path; TODO: Move insid
 PATH=${QTDIR}/bin:${PATH} ${LINUXDEPLOYQT} CartaGen -bundle-non-qt-libs
 PATH=${QTDIR}/bin:${PATH} ${LINUXDEPLOYQT} CartaGen -appimage
 
-tar -cjf CartaGen-x86_64_${VERSION}.tar.bz2 CartaGen-x86_64.AppImage
-
+#tar -cjf CartaGen-x86_64_${VERSION}.tar.bz2 CartaGen-x86_64.AppImage
+mkdir -p Image
+pushd Image
+cp ../CartaGen-x86_64.AppImage ./
+popd
 popd
