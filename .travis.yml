@@ -1,11 +1,13 @@
 sudo: required
 dist: trusty
 language: cpp
-
+env:
+  global:
+    secure: oE8OlCcr2A5XlinDdjP5XartBHYOTIYFTN5hwUkecW/btBswb246UbohFN/WbQz1luE10S8k75TT18LxJzVwdeWZAh6IX8s/asGRO1cV0u9pX55hXUYZjRJMfhPkK2tTd0a6+zD8+3H3PhUYPRhEGGtREQsrD5P9CZbEryo3VQp/5YoW2vBoH30GSff/2PskyJofGIvVPbFK2bdyGYaOL9A7Tv+v4B9kZZLMSTDX0JqfC3dJ9/ToJDTri8S+Y7hVuLJ6i17oSHhPAtWOsxXYOuzxepFPUJkHu3ZU9GZYruDzpxRbprSLPMZ8lf35KcBTlbdRJK20n95jPS+4eTS5q/9VMVq73iVi4qq2r15kgHbg1u9qkys4kto9vSXW7tyJ7B0igb+Joa7IAkJD/c52ybyOMJAxtccrmx5XRQTdqaSZ4thdHtxALB1tqyq+F+Jr51kdE/nwSBG3pIolD0I0hcE/g8kNrCxCketca90BupC0a4J8n+oADJOhZDCp3++F2KPZGgPxkjTGSS29oxJyXQ4F3gNx4J7e+ysrAd31OxT2Brm/WnL3hj1guAp5MMYyRNemMjBTw4A1L+j4Xz/l+9DFyn8DTt1RO9RM4gG1RyCtffERKclIE5eI4an74GvNrIK+rS32Gg2Fw3NM+mWbWh+NZvvTXDUsvMrtOVL3Up4=
 os:
   - linux
   - osx
-
+  
 before_install: . Scripts/ci/$TRAVIS_OS_NAME/before_install.sh
 install: . Scripts/ci/$TRAVIS_OS_NAME/install.sh
 script: . Scripts/ci/$TRAVIS_OS_NAME/script.sh
