@@ -46,7 +46,7 @@ pushd ${BUILDDIR}
 # cp patternpaint_256x256x32.png patternpaint.png
 
 cp ${SOURCEDIR}/CartaGen.icns ./
-#cp ${SOURCEDIR}/CartaGen.png ./
+cp ${SOURCEDIR}/CartaGen.png ./
 cp ${SOURCEDIR}/CartaGen.desktop ./
 
 
