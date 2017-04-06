@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Stop at any error
-set -e
-
 # Location of the QT tools
 if [ -z ${QTDIR+x} ]; then
 	echo "QTDIR not defined- please set it to the location containing the Qt version to build against. For example:"
