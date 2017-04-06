@@ -1,5 +1,5 @@
 
-wget https://dl.itch.ovh/butler/linux-amd64/head/butler
+wget https://dl.itch.ovh/butler/darwin-amd64/head/butler
 chmod +x butler
 
 brew update
