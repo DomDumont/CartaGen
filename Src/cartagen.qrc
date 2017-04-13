@@ -1,0 +1,47 @@
+<RCC>
+  <qresource prefix="myRes">
+    <file>Images/add_48.png</file>
+    <file>Images/bricks.png</file>
+    <file>Images/cards.png</file>
+    <file>Images/clipart_pane.png</file>
+    <file>Images/close_50.png</file>
+    <file>Images/document_blank.png</file>
+    <file>Images/exit_48.png</file>
+    <file>Images/exit_50.png</file>
+    <file>Images/file_save.png</file>
+    <file>Images/flip_horizontal_48.png</file>
+    <file>Images/flip_vertical_48.png</file>
+    <file>Images/folder_blue.png</file>
+    <file>Images/group_48.png</file>
+    <file>Images/insert_comment_48.png</file>
+    <file>Images/insert_photo_48.png</file>
+    <file>Images/picture.png</file>
+    <file>Images/picture_add.png</file>
+    <file>Images/print_48.png</file>
+    <file>Images/printer.png</file>
+    <file>Images/script_text.png</file>
+    <file>Images/shape_align_bottom.png</file>
+    <file>Images/shape_align_center.png</file>
+    <file>Images/shape_align_left.png</file>
+    <file>Images/shape_align_middle.png</file>
+    <file>Images/shape_align_right.png</file>
+    <file>Images/shape_align_top.png</file>
+    <file>Images/shape_flip_horizontal.png</file>
+    <file>Images/shape_flip_vertical.png</file>
+    <file>Images/shape_group.png</file>
+    <file>Images/shape_move_back.png</file>
+    <file>Images/shape_move_backwards.png</file>
+    <file>Images/shape_move_forwards.png</file>
+    <file>Images/shape_move_front.png</file>
+    <file>Images/shape_rotate_anticlockwise.png</file>
+    <file>Images/shape_rotate_clockwise.png</file>
+    <file>Images/shape_ungroup.png</file>
+    <file>Images/text_add.png</file>
+    <file>Images/text_align_center.png</file>
+    <file>Images/text_align_justify.png</file>
+    <file>Images/text_align_left.png</file>
+    <file>Images/text_align_right.png</file>
+    <file>Images/ungroup_48.png</file>
+    <file>Images/update.png</file>
+  </qresource>
+</RCC>

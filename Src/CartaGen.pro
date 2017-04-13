@@ -36,3 +36,6 @@ include(gitversion.pri)
 
 FORMS += \
     mainwindow.ui
+
+RESOURCES += \
+    cartagen.qrc

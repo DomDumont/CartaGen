@@ -13,7 +13,13 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QGraphicsView" name="graphicsView"/>
+    </item>
+   </layout>
+  </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
@@ -38,12 +44,35 @@
    <addaction name="menuAbout"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionInsertText"/>
+  </widget>
   <action name="action_AboutCartaGen">
    <property name="text">
     <string>About CartaGen</string>
    </property>
   </action>
+  <action name="actionInsertText">
+   <property name="icon">
+    <iconset resource="cartagen.qrc">
+     <normaloff>:/myRes/Images/text_add.png</normaloff>:/myRes/Images/text_add.png</iconset>
+   </property>
+   <property name="text">
+    <string>InsertText</string>
+   </property>
+  </action>
  </widget>
- <resources/>
+ <resources>
+  <include location="cartagen.qrc"/>
+ </resources>
  <connections/>
 </ui>
