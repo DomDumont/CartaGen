@@ -3,10 +3,12 @@
 
 #include <QMainWindow>
 
+
 namespace Ui {
 class MainWindow;
 }
 
+class QGraphicsScene;
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
@@ -18,8 +20,11 @@ public:
 private slots:
     void on_action_AboutCartaGen_triggered();
 
+    void on_actionInsertText_triggered();
+
 private:
     Ui::MainWindow *ui;
+    QGraphicsScene *scene;
 };
 
 #endif // MAINWINDOW_H
