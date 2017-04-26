@@ -22,6 +22,8 @@ private slots:
 
     void on_actionInsertText_triggered();
 
+    void on_actionNew_Project_triggered();
+
 private:
     Ui::MainWindow *ui;
     QGraphicsScene *scene;

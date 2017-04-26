@@ -26,16 +26,19 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    dlgnewproject.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    dlgnewproject.h
 
 
 
 include(gitversion.pri)
 
 FORMS += \
-    mainwindow.ui
+    mainwindow.ui \
+    dlgnewproject.ui
 
 RESOURCES += \
     cartagen.qrc

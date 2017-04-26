@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "dlgnewproject.h"
 
 #include <QGraphicsTextItem>
 
@@ -24,9 +25,22 @@ void MainWindow::on_action_AboutCartaGen_triggered()
 
 void MainWindow::on_actionInsertText_triggered()
 {
-    QGraphicsTextItem * io = new QGraphicsTextItem;
-    io->setPos(150,70);
-    io->setPlainText("Test");
+    QGraphicsTextItem * textItem = new QGraphicsTextItem;
 
-    scene->addItem(io);
+    textItem ->setFlags(QGraphicsItem::ItemIsSelectable | QGraphicsItem::ItemIsFocusable | QGraphicsItem::ItemIsMovable);
+    textItem ->setTextInteractionFlags(Qt::TextEditorInteraction);
+
+    textItem->setPos(150,70);
+    textItem->setPlainText("Test");
+
+    scene->addItem(textItem);
+}
+
+void MainWindow::on_actionNew_Project_triggered()
+{
+    DlgNewProject dialog(this);
+    if (dialog.exec() == QDialog::Accepted)
+        {
+
+        }
 }
