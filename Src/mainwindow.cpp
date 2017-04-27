@@ -18,6 +18,7 @@ MainWindow::~MainWindow()
 
 }
 
+// Test
 void MainWindow::on_action_AboutCartaGen_triggered()
 {
 

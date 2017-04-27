@@ -26,7 +26,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>21</height>
+     <height>23</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuRototo">
@@ -34,6 +34,7 @@
      <string>File</string>
     </property>
     <addaction name="actionNew_Project"/>
+    <addaction name="actionQuit"/>
    </widget>
    <widget class="QMenu" name="menuAbout">
     <property name="title">
@@ -72,8 +73,24 @@
    </property>
   </action>
   <action name="actionNew_Project">
+   <property name="icon">
+    <iconset resource="cartagen.qrc">
+     <normaloff>:/myRes/Images/folder_blue.png</normaloff>:/myRes/Images/folder_blue.png</iconset>
+   </property>
    <property name="text">
     <string>New Project</string>
+   </property>
+  </action>
+  <action name="actionQuit">
+   <property name="icon">
+    <iconset resource="cartagen.qrc">
+     <normaloff>:/myRes/Images/exit_50.png</normaloff>:/myRes/Images/exit_50.png</iconset>
+   </property>
+   <property name="text">
+    <string>Quit</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
    </property>
   </action>
  </widget>
