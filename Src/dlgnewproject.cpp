@@ -12,3 +12,9 @@ DlgNewProject::~DlgNewProject()
 {
     delete ui;
 }
+
+
+void DlgNewProject::AddCardType(QString newCard)
+{
+    this->ui->comboBoxCardType->addItem(newCard);
+}

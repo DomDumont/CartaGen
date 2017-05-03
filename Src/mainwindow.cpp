@@ -40,6 +40,7 @@ void MainWindow::on_actionInsertText_triggered()
 void MainWindow::on_actionNew_Project_triggered()
 {
     DlgNewProject dialog(this);
+    dialog.AddCardType("coucou");
     if (dialog.exec() == QDialog::Accepted)
         {
 

@@ -14,6 +14,7 @@ class DlgNewProject : public QDialog
 public:
     explicit DlgNewProject(QWidget *parent = 0);
     ~DlgNewProject();
+    void AddCardType(QString newCard);
 
 private:
     Ui::DlgNewProject *ui;

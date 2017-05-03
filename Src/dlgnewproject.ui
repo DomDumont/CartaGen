@@ -53,15 +53,15 @@
       <property name="sizeConstraint">
        <enum>QLayout::SetMinimumSize</enum>
       </property>
-      <item row="1" column="0">
-       <widget class="QLabel" name="label_2">
+      <item row="1" column="2">
+       <widget class="QLineEdit" name="lineEditLocation"/>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_3">
         <property name="text">
-         <string>Location</string>
+         <string>Card Type</string>
         </property>
        </widget>
-      </item>
-      <item row="0" column="1">
-       <widget class="QLineEdit" name="lineEditName"/>
       </item>
       <item row="0" column="0">
        <widget class="QLabel" name="label">
@@ -70,22 +70,32 @@
         </property>
        </widget>
       </item>
-      <item row="1" column="1">
-       <widget class="QLineEdit" name="lineEditLocation"/>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>Location</string>
+        </property>
+       </widget>
       </item>
       <item row="0" column="2">
+       <widget class="QLineEdit" name="lineEditName"/>
+      </item>
+      <item row="0" column="3">
        <widget class="QCheckBox" name="checkBoxCreateDir">
         <property name="text">
          <string>Create Directory</string>
         </property>
        </widget>
       </item>
-      <item row="1" column="2">
+      <item row="1" column="3">
        <widget class="QPushButton" name="pushButtonBrowse">
         <property name="text">
          <string>Browse</string>
         </property>
        </widget>
+      </item>
+      <item row="2" column="2">
+       <widget class="QComboBox" name="comboBoxCardType"/>
       </item>
      </layout>
     </widget>
