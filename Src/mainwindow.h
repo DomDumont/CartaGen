@@ -1,6 +1,7 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+
 #include <QMainWindow>
 
 
@@ -9,6 +10,8 @@ class MainWindow;
 }
 
 class QGraphicsScene;
+class CardType;
+
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
@@ -16,6 +19,9 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = 0);
     ~MainWindow();
+
+public:
+    QVector<CardType *> supportedCardTypes;
 
 private slots:
     void on_action_AboutCartaGen_triggered();

@@ -27,10 +27,12 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    dlgnewproject.cpp
+    dlgnewproject.cpp \
+    utils.cpp
 
 HEADERS  += mainwindow.h \
-    dlgnewproject.h
+    dlgnewproject.h \
+    utils.h
 
 
 

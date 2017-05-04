@@ -3,6 +3,7 @@
 #include "dlgnewproject.h"
 
 #include <QGraphicsTextItem>
+#include "utils.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent),
@@ -11,6 +12,11 @@ MainWindow::MainWindow(QWidget *parent)
      ui->setupUi(this);
      scene = new QGraphicsScene(this);
      ui->graphicsView->setScene(scene);
+
+     //Test
+     CardType *pTemp = new CardType("coucou",12, 13);
+     supportedCardTypes.append(pTemp);
+
 }
 
 MainWindow::~MainWindow()
@@ -40,7 +46,7 @@ void MainWindow::on_actionInsertText_triggered()
 void MainWindow::on_actionNew_Project_triggered()
 {
     DlgNewProject dialog(this);
-    dialog.AddCardType("coucou");
+    dialog.AddCardTypes(this->supportedCardTypes);
     if (dialog.exec() == QDialog::Accepted)
         {
 

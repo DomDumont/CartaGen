@@ -7,6 +7,8 @@ namespace Ui {
 class DlgNewProject;
 }
 
+class CardType;
+
 class DlgNewProject : public QDialog
 {
     Q_OBJECT
@@ -14,7 +16,7 @@ class DlgNewProject : public QDialog
 public:
     explicit DlgNewProject(QWidget *parent = 0);
     ~DlgNewProject();
-    void AddCardType(QString newCard);
+    void AddCardTypes(QVector<CardType *> _supported);
 
 private:
     Ui::DlgNewProject *ui;
