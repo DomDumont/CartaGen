@@ -18,6 +18,9 @@ public:
     ~DlgNewProject();
     void AddCardTypes(QVector<CardType *> _supported);
 
+private slots:
+    void on_comboBoxCardType_currentIndexChanged(int index);
+
 private:
     Ui::DlgNewProject *ui;
 };

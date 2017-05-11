@@ -15,6 +15,9 @@ MainWindow::MainWindow(QWidget *parent)
 
      //Test
      CardType *pTemp = new CardType("coucou",12, 13);
+
+     supportedCardTypes.append(pTemp);
+     pTemp = new CardType("coucou2",12, 13);
      supportedCardTypes.append(pTemp);
 
 }

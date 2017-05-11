@@ -2,6 +2,7 @@
 #define UTILS_H
 
 #include <QString>
+#include <QMetaType>
 
 class CardType
 {
@@ -18,4 +19,7 @@ public:
      height = h;
  }
 };
+
+Q_DECLARE_METATYPE(CardType *)
+
 #endif // UTILS_H
