@@ -16,10 +16,9 @@ class DlgNewProject : public QDialog
 public:
     explicit DlgNewProject(QWidget *parent = 0);
     ~DlgNewProject();
-    void AddCardTypes(QVector<CardType *> _supported);
 
 private slots:
-    void on_comboBoxCardType_currentIndexChanged(int index);
+
 
 private:
     Ui::DlgNewProject *ui;

@@ -30,6 +30,8 @@ private slots:
 
     void on_actionNew_Project_triggered();
 
+    void on_actionInsertSVG_triggered();
+
 private:
     Ui::MainWindow *ui;
     QGraphicsScene *scene;

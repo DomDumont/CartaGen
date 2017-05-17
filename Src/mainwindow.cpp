@@ -3,6 +3,8 @@
 #include "dlgnewproject.h"
 
 #include <QGraphicsTextItem>
+#include <QtSvg>
+
 #include "utils.h"
 
 MainWindow::MainWindow(QWidget *parent)
@@ -49,9 +51,23 @@ void MainWindow::on_actionInsertText_triggered()
 void MainWindow::on_actionNew_Project_triggered()
 {
     DlgNewProject dialog(this);
-    dialog.AddCardTypes(this->supportedCardTypes);
+
     if (dialog.exec() == QDialog::Accepted)
         {
 
         }
+}
+
+void MainWindow::on_actionInsertSVG_triggered()
+{
+
+    QString fileName = QFileDialog::getOpenFileName(this,tr("Open SVG Image"), "", tr("SVG Image Files (*.svg)"));
+
+    QSvgRenderer *renderer = new QSvgRenderer(fileName);
+    QGraphicsSvgItem *svgItem = new QGraphicsSvgItem();
+    svgItem->setSharedRenderer(renderer);
+    //svgItem->setElementId(QStringLiteral("example"));
+    svgItem->setPos(150,70);
+    svgItem->setScale(1.0f);
+    scene->addItem(svgItem);
 }

@@ -26,7 +26,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>23</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuRototo">
@@ -57,6 +57,7 @@
     <bool>false</bool>
    </attribute>
    <addaction name="actionInsertText"/>
+   <addaction name="actionInsertSVG"/>
   </widget>
   <action name="action_AboutCartaGen">
    <property name="text">
@@ -69,7 +70,10 @@
      <normaloff>:/myRes/Images/text_add.png</normaloff>:/myRes/Images/text_add.png</iconset>
    </property>
    <property name="text">
-    <string>InsertText</string>
+    <string>Insert Text</string>
+   </property>
+   <property name="toolTip">
+    <string>Insert Text</string>
    </property>
   </action>
   <action name="actionNew_Project">
@@ -91,6 +95,15 @@
    </property>
    <property name="shortcut">
     <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionInsertSVG">
+   <property name="icon">
+    <iconset resource="cartagen.qrc">
+     <normaloff>:/myRes/Images/picture_add.png</normaloff>:/myRes/Images/picture_add.png</iconset>
+   </property>
+   <property name="text">
+    <string>Insert SVG</string>
    </property>
   </action>
  </widget>
