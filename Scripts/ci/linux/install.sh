@@ -1,5 +1,5 @@
 
-sudo apt-get -y install qt58base qt58declarative qt58serialport
+sudo apt-get -y install qt58base qt58declarative qt58serialport qt58svg
 
 wget https://dl.itch.ovh/butler/linux-amd64/head/butler
 chmod +x butler
